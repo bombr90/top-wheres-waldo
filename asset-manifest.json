@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/top-wheres-waldo/static/css/main.2d1b5230.css",
+    "main.js": "/top-wheres-waldo/static/js/main.cb023367.js",
+    "static/media/nx3en0780vu41.png": "/top-wheres-waldo/static/media/nx3en0780vu41.e0188adb15f18054f113.png",
+    "index.html": "/top-wheres-waldo/index.html",
+    "main.2d1b5230.css.map": "/top-wheres-waldo/static/css/main.2d1b5230.css.map",
+    "main.cb023367.js.map": "/top-wheres-waldo/static/js/main.cb023367.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2d1b5230.css",
+    "static/js/main.cb023367.js"
+  ]
+}
