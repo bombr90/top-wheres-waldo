@@ -1,0 +1,264 @@
+:root {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: clamp(300px, 100%, 1200px);
+  --main-bg-color: #d4d4d4;
+  --main-text-color: #474747;
+  --hdft-bg-color: #636363;
+  --hdft-text-color: #DADEDF;
+  --form-bg-color: #f0f0f0;
+  --form-text-color: #474747;
+  --preview-bg-color: #dadedf;
+  --header-height: 60px;
+  --footer-height: 40px;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+ul {
+  margin:0;
+  padding:0;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  padding-left: 20px;
+}
+
+input {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: var(--form-bg-color);
+  color: var(--form-text-color);
+}
+
+.italic{
+  font-style: italic;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.App {
+  display:flex;
+  flex-direction: column;
+  white-space: pre-line;
+}
+
+.sticky-bottom {
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+}
+
+.sticky-top {
+  position:sticky;
+  top:0;
+  z-index: 1;
+}
+
+.hide {
+  display:none !important;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  align-self: center;
+ }
+
+#mainImage {
+  width: 1200px; 
+  height: 800px;
+  overflow: scroll;
+  object-fit: cover;
+}
+
+#mainImage:hover {
+  cursor: crosshair;
+}
+
+
+.tag-caption {
+  background-color: whitesmoke;
+  opacity: 25%;
+  width: 96px;
+  height: 96px;
+
+}
+/*********************************/
+/***Header and footer styling*****/
+/*********************************/
+#header {
+  display:flex;
+  align-items: center;
+  background-color: var(--hdft-bg-color);
+  color: var(--hdft-text-color);
+  height: var(--header-height);
+  z-index: 2;
+}
+
+#subheader {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  height: 125px;
+  box-sizing: border-box;
+}
+
+#footer {
+  z-index: 2;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--hdft-bg-color);
+  color: var(--hdft-text-color);
+  height: var(--footer-height);
+}
+
+/*********************************/
+/***Main styling******************/
+/*********************************/
+
+#main {
+  color: var(--main-text-color);
+  background-color: var(--main-bg-color);
+  display:flex;
+  flex-direction: column;
+  height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+
+#listboxSelect {
+  align-self: start;
+  background-color: var(--form-bg-color);
+  opacity: 90%;
+  z-index: 1;
+  position: absolute;
+  width: 160px;
+  
+}
+
+.listboxButton {
+  height: 40px;
+  width: 160px;
+}
+
+.listboxOptions {
+  background-color: var(--form-bg-color);
+  display: flex;
+  flex-direction: column;  
+}
+
+.listboxOption {
+  height: 30px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.listboxOption:hover {
+background-color: var(--hdft-bg-color);
+}
+
+#tagbox {
+  height: 50px;
+  width: 50px;
+  border: 2px solid darkred;
+  border-radius: 50%;
+  background-color: red;
+  opacity: 40%;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.validTarget {
+  height: 50px;
+  width: 50px;
+  border: 2px solid darkgreen;
+  border-radius: 50%;
+  background-color: green;
+  opacity: 40%;
+  z-index: 1;
+  box-sizing: border-box;
+}
+#background {
+  position: relative;
+  overflow: scroll;
+}
+
+.modalalert, .modalRecords, .modalForm{
+  box-shadow: 2px 2px 4px var(--hdft-bg-color);
+  background-color: var(--hdft-text-color);
+  border-radius: 8px;
+  opacity: 95%;
+  position: absolute;
+  top: calc((100vh - 240px) / 2);
+  left: calc((100vw - 400px) / 2);
+  box-sizing: border-box;
+  padding: 16px;
+  width: 400px;
+  z-index: 2;
+ }
+
+ .modalalert > div, .modalRecords > div, .modalForm > div {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+  gap: 16px;
+ }
+
+ .modalRecords, .modalForm {
+   top: calc((100vh - 240px) / 2);
+  left: calc((100vw - 600px) / 2);
+  width: 600px;
+ }
+
+ .recordGrid{
+  display:flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 2px solid var(--form-text-color);
+ }
+
+ .recordLine {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  height: 1.3rem;
+  background-color: lightgray;
+  align-items: center;
+ }
+
+ .recordLine:nth-child(odd){
+  background-color: gray;
+ }
+
+ #display {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+ }
+ .profileImage {
+  background-color: var(--hdft-text-color);
+  border-radius: 50%;
+ }
+
+ .buttons{
+  display:flex;
+  gap: 8px;
+ }
